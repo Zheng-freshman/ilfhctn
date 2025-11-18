@@ -25,18 +25,11 @@ ILF-HCTN: Iterative Latent Fusion-based  Heterogeneous Cross Training Network fo
 
 ## Usage
 
-USB is easy to use and extend. Going through the bellowing examples will help you familiar with USB for quick use, evaluate an existing SSL algorithm on your own dataset, or developing new SSL algorithms.
+ILF-HCTN based on USB, which is easy to use and extend. Going through the bellowing examples will help you familiar with USB for quick use, evaluate an existing SSL algorithm on your own dataset, or developing new SSL algorithms.
 
-### Quick Start with USB package
+### Envirenment Prepare
 
-<!-- TODO: add quick start example and refer lighting notebook -->
-
-Please see [Installation](#installation) to install USB first. We provide colab tutorials for:
-
-- [Beginning example](https://colab.research.google.com/drive/1lFygK31jWyTH88ktao6Ow-5nny5-B7v5)
-- [Customize datasets](https://colab.research.google.com/drive/1zbswPm1sM8j0fndUQOeqX2HADdYq-wOw)
-
-### Start with Conda
+#### Start with Conda
 
 **Step1: Create your environment**
 
@@ -60,7 +53,7 @@ cd ilfhctn
 python install -e .
 ```
 
-### Start with Docker
+#### Start with Docker
 
 **Step1: Check your environment**
 
@@ -118,7 +111,9 @@ Run
 python evaluate.py --c exp1/nsclccox-fusion-dual-mini.yaml
 ```
 
-### Dataset
+### Train and Evaluation
+
+#### Full Dataset
 
 You can get  NBIA Data Retriever from [National Cancer Institute]([Downloading the NBIA Data Retriever - National Biomedical Imaging Archive - NCI Wiki](https://wiki.nci.nih.gov/spaces/NBIA/pages/392073587/Downloading+the+NBIA+Data+Retriever))
 
@@ -139,7 +134,7 @@ Then use tcia file in data/NSCLC download NSCLC-Radiomics Dataset.
 ------NSCLC-Radiomics-Version-4-Oct-2020-NBIA-manifest.tcia
 ```
 
-### Training
+#### Training
 
 Here is an example to train ILF-HCTN on MOF-Cohort with Survival Analysis label:
 
@@ -152,21 +147,13 @@ python train.py --c exp1/nsclccox-fusion-mona.yaml
 python train.py --c exp1/nsclccox-fusion-dual.yaml
 ```
 
-### Evaluation
+#### Evaluation
 
 After training, you can check the evaluation performance on training logs, or running evaluation script:
 
 ```
 python evaluate.py --c exp1/nsclccox-fusion-dual.yaml
 ```
-
-<!-- MODEL ZOO -->
-
-## Model Zoo
-
-TODO: add pre-trained models.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 # Framework: USB
 
@@ -229,6 +216,15 @@ Check the developing documentation for creating your own SSL algorithm!
 _For more examples, please refer to the [Documentation](https://example.com)_
 
 <!-- GETTING STARTED -->
+
+### Start Guide of USB package
+
+<!-- TODO: add quick start example and refer lighting notebook -->
+
+You can see [Installation](#installation) for install USB. More colab tutorials provided here:
+
+- [Beginning example](https://colab.research.google.com/drive/1lFygK31jWyTH88ktao6Ow-5nny5-B7v5)
+- [Customize datasets](https://colab.research.google.com/drive/1zbswPm1sM8j0fndUQOeqX2HADdYq-wOw)
 
 ## Getting Started
 
