@@ -17,70 +17,9 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-<!-- 
-***[![MIT License][license-shield]][license-url]
--->
+# ILF-HCTN
 
-<!-- GETTING STARTED -->
-
-## Getting Started
-
-This is an example of how to set up USB locally.
-To get a local copy up, running follow these simple example steps.
-
-### Prerequisites
-
-USB is built on pytorch, with torchvision, torchaudio, and transformers.
-
-To install the required packages, you can create a conda environment:
-
-```sh
-conda create --name usb python=3.8
-```
-
-then use pip to install required packages:
-
-```sh
-pip install -r requirements.txt
-```
-
-From now on, you can start use USB by typing 
-
-```sh
-python train.py --c config/usb_cv/fixmatch/fixmatch_cifar100_200_0.yaml
-```
-
-### Installation
-
-We provide a Python package *semilearn* of USB for users who want to start training/testing the supported SSL algorithms on their data quickly:
-
-```sh
-pip install semilearn
-```
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-### Development
-
-You can also develop your own SSL algorithm and evaluate it by cloning USB:
-
-```sh
-git clone https://github.com/microsoft/Semi-supervised-learning.git
-```
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-### Prepare Datasets
-
-The detailed instructions for downloading and processing are shown in [Dataset Download](./preprocess/). Please follow it to download datasets before running or developing algorithms.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
+ILF-HCTN: Iterative Latent Fusion-based  Heterogeneous Cross Training Network for  Medical Fracture Prediction  
 
 <!-- USAGE EXAMPLES -->
 
@@ -101,11 +40,25 @@ Please see [Installation](#installation) to install USB first. We provide colab 
 
 **Step1: Create your environment**
 
+Create environment with conda
 
+```bash
+conda create -n myenv python=3.8
+conda env create -f environment.yml
+```
 
 **Step2: Clone the project**
 
+```bash
+git clone https://github.com/Zheng-freshman/ilfhctn.git
+```
 
+**Step3: install USB Framework**
+
+```bash
+cd ilfhctn
+python install -e .
+```
 
 ### Start with Docker
 
@@ -139,7 +92,7 @@ to use GPU in a container.
 
 ### Quick Test
 
-Download mini dateset and pth file from 
+Download mini dateset and pth file from https://mega.nz/folder/sAN2XAQC#WWSdaiCNCgxMua-DVwtSNw
 
 Put NACLC-mini to here
 
@@ -164,8 +117,6 @@ Run
 ```
 python evaluate.py --c exp1/nsclccox-fusion-dual-mini.yaml
 ```
-
-
 
 ### Dataset
 
@@ -276,6 +227,62 @@ TODO: add pre-trained models.
 Check the developing documentation for creating your own SSL algorithm!
 
 _For more examples, please refer to the [Documentation](https://example.com)_
+
+<!-- GETTING STARTED -->
+
+## Getting Started
+
+This Project is based on 
+To get a local copy up, running follow these simple example steps.
+
+### Prerequisites
+
+USB is built on pytorch, with torchvision, torchaudio, and transformers.
+
+To install the required packages, you can create a conda environment:
+
+```sh
+conda create --name usb python=3.8
+```
+
+then use pip to install required packages:
+
+```sh
+pip install -r requirements.txt
+```
+
+From now on, you can start use USB by typing 
+
+```sh
+python train.py --c config/usb_cv/fixmatch/fixmatch_cifar100_200_0.yaml
+```
+
+### Installation
+
+We provide a Python package *semilearn* of USB for users who want to start training/testing the supported SSL algorithms on their data quickly:
+
+```sh
+pip install semilearn
+```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### Development
+
+You can also develop your own SSL algorithm and evaluate it by cloning USB:
+
+```sh
+git clone https://github.com/microsoft/Semi-supervised-learning.git
+```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+### Prepare Datasets
+
+The detailed instructions for downloading and processing are shown in [Dataset Download](./preprocess/). Please follow it to download datasets before running or developing algorithms.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- TRADEMARKS -->
 
