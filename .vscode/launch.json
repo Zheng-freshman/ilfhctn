@@ -1,0 +1,171 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    //config/usb_cv/softmatch/softmatch_semi_aves_3959_0.yaml
+    //semi-fr_classify.yaml
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "healnet调试",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "train.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--c",
+                "exp0/supervised-healnet.yaml",
+            ]
+        },
+        {
+            "name": "DualCox调试",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "train.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--c",
+                "exp0/frcox-fusion-dual2.yaml",
+            ]
+        },
+        {
+            "name": "FuCox调试",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "train.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--c",
+                "semi-fusioncox.yaml",
+            ]
+        },
+        {
+            "name": "FuCox Mona",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "train.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--c",
+                "exp1/nsclccox-fusion-mona.yaml",
+            ]
+        },
+        {
+            "name": "FuCox微调",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "train.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--c",
+                "exp1/nsclccox-fusion-finetune.yaml",
+            ]
+        },
+        {
+            "name": "SimMatch",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "train.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--c",
+                "exp1/nsclccox-noepass-simmatch.yaml",
+            ]
+        },
+        {
+            "name": "EPASS",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "train.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--c",
+                "exp1/nsclccox-simmatch.yaml",
+            ]
+        },
+        {
+            "name": "Sequence",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "train.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--c",
+                "exp1/nsclccox-sequencematch.yaml",
+            ]
+        },
+        {
+            "name": "ReFix",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "train.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--c",
+                "exp1/nsclccox-refixmatch.yaml",
+            ]
+        },
+        {
+            "name": "FusionNet调试",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "train.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--c",
+                "semi-fusion.yaml",
+            ]
+        },
+        {
+            "name": "FusionNet预训练微调",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "train.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--c",
+                "semi-fusion-finetune.yaml",
+            ]
+        },
+        {
+            "name": "SemiHealNet 调试",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "train.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--c",
+                "semi-healnet.yaml",
+            ]
+        },
+        {
+            "name": "FrTrain 调试",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "train.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--c",
+                "semi-fr_classify.yaml",
+            ]
+        },
+        {
+            "name": "224vit 调试程序",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "32vit 调试程序",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "train.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--c",
+                "config/usb_cv/softmatch/softmatch_cifar100_200_0.yaml",
+            ]
+        }
+    ]
+}
