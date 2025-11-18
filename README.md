@@ -137,6 +137,57 @@ cd Semi-supervised-learning && docker build -t semilearn .
 Job done. You can use the image you just built for your own project. Don't forget to use the argument `--gpu` when you want
 to use GPU in a container.
 
+### Quick Test
+
+Download mini dateset and pth file from 
+
+Put NACLC-mini to here
+
+```bash
+--data
+----NACLC-mini
+------manifest-1603198545583
+------NSCLC-Radiomics-Lung1.clinical-version3-Oct-2019.csv
+```
+
+Put model_best.pth to here
+
+```bash
+--saved_models
+----usb_ns_mini
+------model_best.pth
+----split_Dataset-lb-0.8_splitNum-5.json
+```
+
+Run
+
+```
+python evaluate.py --c exp1/nsclccox-fusion-dual-mini.yaml
+```
+
+
+
+### Dataset
+
+You can get  NBIA Data Retriever from [National Cancer Institute]([Downloading the NBIA Data Retriever - National Biomedical Imaging Archive - NCI Wiki](https://wiki.nci.nih.gov/spaces/NBIA/pages/392073587/Downloading+the+NBIA+Data+Retriever))
+
+Then use tcia file in data/NSCLC download NSCLC-Radiomics Dataset.
+
+```sh
+--data
+----NSCLC
+------manifest-1603198545583
+--------metadata.csv
+--------NSCLC-Radiomic
+----------LUNG1-001
+------------......
+----------LUNG1-002
+----------LUNG1-003
+-----......
+------NSCLC-Radiomics-Lung1.clinical-version3-Oct-2019.csv
+------NSCLC-Radiomics-Version-4-Oct-2020-NBIA-manifest.tcia
+```
+
 ### Training
 
 Here is an example to train ILF-HCTN on MOF-Cohort with Survival Analysis label:
@@ -155,7 +206,7 @@ python train.py --c exp1/nsclccox-fusion-dual.yaml
 After training, you can check the evaluation performance on training logs, or running evaluation script:
 
 ```
-python evaluate.py --c exp0/semi-fusioncox-dual.yaml
+python evaluate.py --c exp1/nsclccox-fusion-dual.yaml
 ```
 
 <!-- MODEL ZOO -->
